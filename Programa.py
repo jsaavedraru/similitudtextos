@@ -26,16 +26,16 @@ stop_words_spanish = get_stop_words('spanish')
 ### Vectorizar y normalizar el Corpus
 
 vectorizer = TfidfVectorizer(lowercase = True,
-							 # stop_words = stop_words_spanish,
-							 norm = 'l2',
-							 use_idf = True,
-							 smooth_idf = True,
-							 encoding = 'UTF-8',
-							 analyzer = 'word',
-							 sublinear_tf = True,
-							 binary = True,
-							 ngram_range = (1, 3)
-							 )
+		 # stop_words = stop_words_spanish,
+		 norm = 'l2',
+		 use_idf = True,
+		 smooth_idf = True,
+		 encoding = 'UTF-8',
+		 analyzer = 'word',
+		 sublinear_tf = True,
+		 binary = True,
+		 ngram_range = (1, 3)
+		 )
 X_corpus = vectorizer.fit_transform(corpus)
 
 print('La dimension del corpus es: ', X_corpus.shape)
